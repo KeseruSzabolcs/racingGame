@@ -31,6 +31,9 @@ public class App
             System.out.println(car.name);
             System.out.println(car.traveledDistance);
             System.out.println(car.running);
+            System.out.println(car.engine);
+
+            car.accelerate(60,1);
                 //CTRL+d=douplicate line
                 //CTRL+F5
                 //String name=null by default
