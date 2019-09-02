@@ -6,4 +6,7 @@ public class Car extends AutoVehicle {
     //has-a relationship
     int doorCount;
 
+    public Car(Engine engine) {
+        super(engine);
+    }
 }

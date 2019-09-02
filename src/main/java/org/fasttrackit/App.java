@@ -12,7 +12,11 @@ public class App
     {
             //this is a one line comment :)
             // click pe o linie, ctrl+x sterge linia(cut)
-         Car car = new Car();
+        Engine engine = new Engine();
+        engine.capacity = 1600;
+        engine.manufacturer = "Renault";
+
+         Car car = new Car(engine);
          car.name = "Dacia";
          car.doorCount = 5;
          car.fuelLevel = 60;
@@ -20,11 +24,7 @@ public class App
          car.maxSpeed = 180;
          car.mileage = 8.5;
         //new
-         Engine engine = new Engine();
-            engine.capacity = 1594;
-            engine.manufacturer = "Renault";
 
-         car.engine = engine;
 
                  // ALT+mouse pot modifica mai multe lini ex sterge...
                 //sout+enter =System.out.println();
@@ -39,7 +39,10 @@ public class App
                 //String name=null by default
                 //orice nume primeste 0
                 //orice boolean primeste by default false
-        Car car2 = new Car();
+        Engine engine2 = new Engine();
+        engine2.capacity = 2000;
+        engine2.manufacturer = "VW";
+        Car car2 = new Car(engine2);
             car2.name = "BMW";
             car2.doorCount = 2;
             car2.fuelLevel = 50;
