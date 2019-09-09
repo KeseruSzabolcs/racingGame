@@ -11,7 +11,7 @@ public class App
     public static void main( String[] args )
     {
 
-        AutoVehicle autoVehicle = new AutoVehicle()
+        AutoVehicle autoVehicle = new AutoVehicle();
             //this is a one line comment :)
             // click pe o linie, ctrl+x sterge linia(cut)
         Engine engine = new Engine();
@@ -27,7 +27,7 @@ public class App
          car.doorCount = 5;
 
         //new
-
+         System.out.println("Car object: " + car.toString());
 
                  // ALT+mouse pot modifica mai multe lini ex sterge...
                 //sout+enter =System.out.println();
@@ -81,7 +81,11 @@ public class App
 
        // car = car2;
 
+            HybridCar hybridCar = new HybridCar();
+            hybridCar.setName("Cheater");
 
-
+            hybridCar.accelerate(60,1);
+            System.out.println("fuel level: " + hybridCar.getFuelType());
+            System.out.println("Traveled distance: " + hybridCar.getTraveledDistance());
     }
 }
