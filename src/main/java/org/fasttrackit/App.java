@@ -10,6 +10,8 @@ public class App
 {
     public static void main( String[] args )
     {
+
+        AutoVehicle autoVehicle = new AutoVehicle()
             //this is a one line comment :)
             // click pe o linie, ctrl+x sterge linia(cut)
         Engine engine = new Engine();
