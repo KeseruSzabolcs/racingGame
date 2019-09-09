@@ -17,23 +17,27 @@ public class App
         engine.manufacturer = "Renault";
 
          Car car = new Car(engine);
-         car.name = "Dacia";
+         car.setName("Dacia");
+         car.setFuelLevel(60);
+         car.setMileage(8.5);
+         car.setMaxSpeed(180);
+         car.setFuelType("Gasoline");
          car.doorCount = 5;
-         car.fuelLevel = 60;
-         car.fuelType = "Gasoline";
-         car.maxSpeed = 180;
-         car.mileage = 8.5;
+
         //new
 
 
                  // ALT+mouse pot modifica mai multe lini ex sterge...
                 //sout+enter =System.out.println();
-            System.out.println(car.name);
-            System.out.println(car.traveledDistance);
-            System.out.println(car.running);
+            System.out.println(car.getName());
+            System.out.println(car.getTraveledDistance());
+            System.out.println(car.isRunning());
+
             System.out.println(car.engine);
 
             car.accelerate(60,1);
+
+
                 //CTRL+d=douplicate line
                 //CTRL+F5
                 //String name=null by default
@@ -43,20 +47,39 @@ public class App
         engine2.capacity = 2000;
         engine2.manufacturer = "VW";
         Car car2 = new Car(engine2);
-            car2.name = "BMW";
+            car2.setName("BMW");
+            car2.setMaxSpeed(210);
+            car2.setMileage(8.0);
+            car2.setFuelLevel(50);
+            car2.setFuelType("Petrol");
             car2.doorCount = 2;
-            car2.fuelLevel = 50;
-            car2.fuelType = "Petrol";
-            car2.maxSpeed = 210;
-            car2.mileage = 8.0;
 
-            car.name = "Audi";
+
+           // car.name = "Audi";
                 System.out.println("");
-                System.out.println("Car2 name: "+car2.name);
-                System.out.println("Car1 name: "+car.name);
+                System.out.println("Car2 name: "+car2.getName());
+                System.out.println("Car1 name: "+car.getName());
                 //concatenare (concatenation)
 
-            car = car2;
+//             System.out.println("Static variable examples:");
+//
+//             //we sould only call satatic variables from the class itself (Car),
+//             // Not from a variable containing an object of that class
+//             car.totalCount = 1;
+//
+//             System.out.println("Total count in car: " + car.totalCount);
+//
+//
+//             car2.totalCount = 12;
+//
+//             System.out.println("Total count in car after setting car2: " + car.totalCount);
+//             System.out.println("Total count in car2: " + car2.totalCount);
+//             System.out.println("Total count in Car class: " + car2.totalCount);
+
+
+       // car = car2;
+
+
 
     }
 }
