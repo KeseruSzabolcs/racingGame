@@ -49,6 +49,7 @@ public class Game {
         track2.setLength(400);
 
         tracks[1] = track2;
+        /
     }
 
     private void displayTracks(){
