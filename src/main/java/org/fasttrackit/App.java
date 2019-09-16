@@ -11,6 +11,9 @@ public class App
     public static void main( String[] args )
     {
 
+        Game game = new Game();
+        game.start();
+
         AutoVehicle autoVehicle = new AutoVehicle();
             //this is a one line comment :)
             // click pe o linie, ctrl+x sterge linia(cut)
@@ -81,18 +84,18 @@ public class App
 
        // car = car2;
 
-            Vehicle hybridCar = new HybridCar();
-            hybridCar.setName("Cheater");
-
-            //method implementation from object's class not from variable's class
-            hybridCar.accelerate(60,1);
-
-            System.out.println("fuel level: " + hybridCar.getFuelType());
-            System.out.println("Traveled distance: " + hybridCar.getTraveledDistance());
-
-
-            //variable type decides what methods can be invoked
-            //type casting
-        ((HybridCar) hybridCar).fly();
+//            Vehicle hybridCar = new HybridCar();
+//            hybridCar.setName("Cheater");
+//
+//            //method implementation from object's class not from variable's class
+//            hybridCar.accelerate(60,1);
+//
+//            System.out.println("fuel level: " + hybridCar.getFuelType());
+//            System.out.println("Traveled distance: " + hybridCar.getTraveledDistance());
+//
+//
+//            //variable type decides what methods can be invoked
+//            //type casting
+//        ((HybridCar) hybridCar).fly();
     }
 }

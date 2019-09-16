@@ -30,7 +30,7 @@ public class Vehicle {
 
         if (fuelLevel <= 0){
             System.out.println("You are out of fuel...:(");
-            reutrn 0;
+            return 0;
         }
 
 
