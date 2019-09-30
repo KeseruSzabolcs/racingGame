@@ -23,12 +23,25 @@ public class Game {
         Track selectedTrack = getSelectedTrackFromUser();
         initializeCompetitors();
 
-        //for-each or enhanced for loop
-        for (Vehicle vehicle : competitors) {
-            double speed = getAccelerationSpeedFromUser();
-            vehicle.accelerate(speed, 1);
-        }
+        boolean winnerNotKnown = true;
+        int competitorsWithoutFuel = 0;
+        while (winnerNotKnown && competitorsWithoutFuel < competitors.size()) {
 
+            //for-each or enhanced for loop
+            for (Vehicle vehicle : competitors) {
+                double speed = getAccelerationSpeedFromUser();
+                vehicle.accelerate(speed, 1);
+
+                if (selectedTrack.getLength() <= vehicle.getTraveledDistance()) {
+                    winnerNotKnown = false;
+                    System.out.println("The winner is: " + vehicle.getName());
+                    break;
+                }
+                if (vehicle.getFuelLevel() <= 0){
+                    competitorsWithoutFuel++;
+                }
+            }
+        }
     }
 
     private double getAccelerationSpeedFromUser() {
